@@ -1,0 +1,82 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mylover57"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    <!-- 获得电话状态权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获得接收短信的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 获得读联系人表的权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 获得写入sd卡的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 获得读联系人表的权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 获得网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获得打电话权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 获取活动栈的权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 获取系统窗体操作的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/phone_intercept_appname" >
+        <activity
+            android:name=".activity.PasswordActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.CodeSelectActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".activity.PhoneInterceptActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".activity.BlockActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".activity.MsgInterceptActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".activity.PreferenceActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".activity.ContentActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".activity.FlowMainActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name=".activity.FlowListActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.mylover57.activity.CodeEnterActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name="com.mylover57.MainActivity"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.PhoneService" />
+        <service android:name=".service.FlowUpdateService" />
+        <service android:name=".service.LockService" />
+        <service android:name=".service.FloatService" />
+    </application>
+
+</manifest>

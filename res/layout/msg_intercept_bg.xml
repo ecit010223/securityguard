@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+             <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+	    android:background="@drawable/title_bg"
+    android:gravity="center">
+	    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/smsintercept_title"
+        style="@style/title_text"/>
+	    </LinearLayout>
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <Button android:id="@+id/msg_intercept_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/g_btn"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:text="@string/phone_intercept_btn"/>
+         
+        <EditText android:id="@+id/msg_intercept_et"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_toLeftOf="@id/msg_intercept_btn"
+            android:inputType="phone"
+            android:textColor="#000000"
+            android:hint="@string/phone_intercept_ht"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/add_black_bg"/>
+    </RelativeLayout>
+    
+    <TextView android:id="@+id/msg_intercept_tv"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="2dp"
+        android:textColor="#000"
+        android:text="@string/msg_intercept_head"/>
+    
+    <ListView android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/line"
+        android:layout_marginLeft="2dp">
+        
+    </ListView>
+        <ImageView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/line_"
+        android:contentDescription="@null"/>
+</LinearLayout>

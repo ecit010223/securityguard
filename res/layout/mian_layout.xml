@@ -1,0 +1,226 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/total_main_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_screen_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!--
+     将整个布局分为3层，最上层为360的图标LOGO
+	第二层为360的各种功能的图标，
+		第二层中的view控件可以看做划分控件与控件之间的边界线
+			第二层也可以根据Horizental，划分为三个部分。
+				比例的控制可以使用android:weight
+	第三层为底部的剩余边界
+    -->
+    <!-- 第一层 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.08" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+    <!-- 第二层 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.87"
+        android:baselineAligned="false" >
+
+        <!-- 边缘的空白 -->
+
+        <LinearLayout
+            android:id="@+id/blank"
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+        <!-- 功能图标布局 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:orientation="vertical" >
+
+            <!-- 第一行 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" >
+
+                <!-- 自定义控件，img告诉控件需要使用哪张图片，txtName告诉控件需要显示哪些文字 -->
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/menu_phone"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    img="@drawable/tabicon_call_record_normal"
+                    txtName="通话监控" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/menu_msg"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    img="@drawable/tabicon_sms_record_normal_"
+                    txtName="短信监控" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+            <!-- 第二行 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" >
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/menu_set"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    img="@drawable/tabicon_black_white_list_normal"
+                    txtName="拦截策略" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/menu_flow"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    img="@drawable/tool_box_network_"
+                    txtName="流量监控" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+            <!-- 第三行 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" >
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/menu_code"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    img="@drawable/tool_box_system_exam"
+                    txtName="密码设置" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/menu_lock"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    img="@drawable/tool_box_baohe"
+                    txtName="程序加锁" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+            <!-- 第四行 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25" >
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/imageButton7"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    img="@drawable/addnew"
+                    txtName="可扩展项01" />
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" />
+
+                <com.mylover57.entity.MyButton
+                    android:id="@+id/imageButton8"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    img="@drawable/addnew"
+                    txtName="可扩展项02" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 右边的工具栏 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/main_menu_normal" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/main_bg_normal" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/appmgr_upgrade_edition_brief" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 第三层 -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="0.05"
+        android:contentDescription="@null" />
+
+</LinearLayout>

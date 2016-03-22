@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <View android:id="@+id/msg_intercept_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/msg_intercept"
+        />
+     
+    <TextView android:id="@+id/msg_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:textColor="#000"
+	    android:layout_toRightOf="@id/msg_intercept_img"
+	    android:layout_marginLeft="20dp"
+	    />
+    <TextView android:id="@+id/msg_phoneNo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:textColor="#000"
+	    android:layout_alignLeft="@id/msg_name"
+	    android:layout_below="@id/msg_name"
+	    />
+     <TextView android:id="@+id/msg_time"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/msg_phoneNo"
+	    android:layout_marginLeft="30dp"
+        android:textColor="#000"
+	    android:layout_below="@id/msg_name"
+	    />
+     <TextView android:id="@+id/msg_content"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+        android:textColor="#000"
+		android:layout_toRightOf="@id/msg_name"
+		android:layout_marginLeft="30dp"
+	    />
+
+</RelativeLayout>

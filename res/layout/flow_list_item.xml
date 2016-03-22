@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/flow_item_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="2dp"
+        android:background="@drawable/ic_launcher"
+        android:contentDescription="@string/flow_item_img" />
+
+    <TextView
+        android:id="@+id/flow_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_toRightOf="@id/flow_item_img"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/flow_item_uploadBf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/flow_item_name"
+        android:layout_below="@id/flow_item_name"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/flow_item_img"
+        android:text="@string/flow_item_uploadBf"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/flow_item_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flow_item_name"
+        android:layout_marginRight="30dp"
+        android:layout_toRightOf="@id/flow_item_uploadBf"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/flow_item_downloadBf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flow_item_name"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/flow_item_upload"
+        android:text="@string/flow_item_downloadBf"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/flow_item_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flow_item_name"
+        android:layout_toRightOf="@id/flow_item_downloadBf"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/flow_item_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/flow_item_name"
+        android:layout_marginRight="30dp"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/flow_item_totalBf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/flow_item_name"
+        android:layout_toLeftOf="@id/flow_item_total"
+        android:text="@string/flow_item_totalBf"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
